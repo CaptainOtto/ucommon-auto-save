@@ -1,0 +1,30 @@
+AccessModifierOffset: -4
+AlignAfterOpenBracket: AlwaysBreak
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignTrailingComments: true
+AlignOperands: true
+AllowShortBlocksOnASingleLine: true
+AllowShortFunctionsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AlwaysBreakTemplateDeclarations: true
+BinPackArguments: false
+BreakBeforeBraces: Allman
+BreakConstructorInitializersBeforeComma: true
+ColumnLimit: 240
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+IndentWidth: 4
+TabWidth: 4
+IndentCaseLabels: true
+Language: .cs
+NamespaceIndentation: All
+PointerAlignment: Left
+SortIncludes: false
+SortUsingDeclarations : true
+SpaceAfterCStyleCast: true
+SpaceBeforeAssignmentOperators : true
+SpaceBeforeParens: ControlStatements
+SpaceInEmptyParentheses: false
+Standard : Auto
+UseTab: Never
