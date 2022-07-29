@@ -1,7 +1,8 @@
+using UnityEditor;
 
-namespace UCommon.AutoSave.Editor
+namespace UCommon.AutoSave
 {
-    public class UAutoSaveUI
+    public partial class UAutoSave
     {
         public override void OnInspectorGUI()
         {
@@ -14,7 +15,7 @@ namespace UCommon.AutoSave.Editor
         [MenuItem("Window/Autosave/Find Configuration file.")]
         public static void showConfig()
         {
-            EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<AutoSaveConfigSo>(getConfigPath()).GetInstanceID());
+            EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<UAutoSaveConfigSo>(GetConfigurationFilePath()).GetInstanceID());
         }
     }
 }

@@ -1,5 +1,6 @@
 {
-    "name": "CaptnJohn.AutoSave.Editor",
+    "name": "UCommon.AutoSave",
+    "rootNamespace": "",
     "includePlatforms": [
         "Editor"
     ],
@@ -9,5 +10,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": []
+    "versionDefines": [],
+    "noEngineReferences": false
 }

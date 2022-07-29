@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using UnityEditor;
+using UnityEditor.SceneManagement;
+using UnityEngine;
 
-namespace UCommon.AutoSave.Editor
+namespace UCommon.AutoSave
 {
-    [CustomEditor(typeof(UAutoSaveUI))]
+    [CustomEditor(typeof(UAutoSave))]
     public partial class UAutoSave : Editor
     {
         private static UAutoSaveConfigSo _autoSaveConfigSo;
@@ -23,7 +26,7 @@ namespace UCommon.AutoSave.Editor
             CancelTask();
 
             _tokenSource = new CancellationTokenSource();
-            _task = saveWithInterval(_tokenSource.Token);
+            _task = SaveWithInterval(_tokenSource.Token);
         }
 
         /// <summary>
@@ -35,18 +38,14 @@ namespace UCommon.AutoSave.Editor
         {
             while (!token.IsCancellationRequested)
             {
-                if (!ShouldTryToAutoSave())
-                {
-                    continue;
-                }
-
                 await Task.Delay(_autoSaveConfigSo.saveFrequency * 1000 * 60, token);
+
                 if (_autoSaveConfigSo == null)
                 {
                     TryGetConfigAndSetIt();
                 }
 
-                if (!_autoSaveConfigSo.enabled
+                if (!_autoSaveConfigSo.enabled || !ShouldTryToAutoSave())
                 {
                     continue;
                 }
@@ -78,7 +77,7 @@ namespace UCommon.AutoSave.Editor
         /// </summary>
         private static bool ShouldTryToAutoSave()
         {
-            return Application.isPlaying || BuildPipeline.isBuildingPlayer || EditorApplication.isCompiling || !UnityEditorInternal.InternalEditorUtility.isApplicationActive)
+            return (Application.isPlaying || BuildPipeline.isBuildingPlayer || EditorApplication.isCompiling) || !UnityEditorInternal.InternalEditorUtility.isApplicationActive;
         }
 
         /// <summary>
@@ -93,15 +92,15 @@ namespace UCommon.AutoSave.Editor
                     return;
                 }
 
-                const string configurationFilePath = GetConfigurationFilePath();
+                string configurationFilePath = GetConfigurationFilePath();
 
-                if (path == null)
+                if (configurationFilePath == null)
                 {
                     CreateConfigurationAsset();
                     continue;
                 }
 
-                _autoSaveConfigSo = AssetDatabase.LoadAssetAtPath<AutoSaveConfigSo>(path);
+                _autoSaveConfigSo = AssetDatabase.LoadAssetAtPath<UAutoSaveConfigSo>(configurationFilePath);
 
                 break;
             }
@@ -112,7 +111,7 @@ namespace UCommon.AutoSave.Editor
         /// </summary>
         private static void CreateConfigurationAsset()
         {
-            AssetDatabase.CreateAsset(CreateInstance<AutoSaveConfigSo>(), $"Assets/{nameof(AutoSaveConfigSo)}.asset");
+            AssetDatabase.CreateAsset(CreateInstance<UAutoSaveConfigSo>(), $"Assets/{nameof(UAutoSaveConfigSo)}.asset");
             Debug.Log("A configuration file has been created at the root of the assets folder.");
         }
 
@@ -122,7 +121,7 @@ namespace UCommon.AutoSave.Editor
         /// <returns></returns>
         private static string GetConfigurationFilePath()
         {
-            List<string> paths = AssetDatabase.FindAssets(nameof(AutoSaveConfigSo)).Select(AssetDatabase.GUIDToAssetPath).Where(asset => asset.EndsWith(".asset")).ToList();
+            List<string> paths = AssetDatabase.FindAssets(nameof(UAutoSaveConfigSo)).Select(AssetDatabase.GUIDToAssetPath).Where(asset => asset.EndsWith(".asset")).ToList();
 
             if (paths.Count > 1)
             {
