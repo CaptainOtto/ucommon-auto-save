@@ -1,4 +1,4 @@
-# Unity Package Template
+# Unity Auto save
 
 Placeholder markdown file for package documentation.
 
