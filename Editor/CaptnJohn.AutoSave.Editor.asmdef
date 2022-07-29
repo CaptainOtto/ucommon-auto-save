@@ -1,8 +1,5 @@
 {
-    "name": "CaptnJohn.Template.Editor",
-    "references": [
-        "CaptnJohn.Template"
-    ],
+    "name": "CaptnJohn.AutoSave.Editor",
     "includePlatforms": [
         "Editor"
     ],
