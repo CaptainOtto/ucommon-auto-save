@@ -4,7 +4,7 @@
 [![Issues](https://img.shields.io/github/issues/CaptnJohn/ucommon-auto-save)](https://github.com/CaptnJohn/ucommon-auto-save/issues)
 [![Version](https://img.shields.io/github/package-json/v/CaptnJohn/ucommon-auto-save)](https://img.shields.io/github/package-json/v/CaptnJohn/ucommon-auto-save)
 
-![image](https://user-images.githubusercontent.com/16833945/181438270-f99e16d0-40e0-4a6a-9ad1-7ade7e30eb75.png)
+![image](https://user-images.githubusercontent.com/16833945/181690966-65b43a04-5f3b-4682-afcf-7a6fc3dec3da.png)
 
 UCommon Auto save is a github repository containing a unity package for enabling auto saving in your project.
 
