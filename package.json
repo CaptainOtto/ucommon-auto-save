@@ -1,10 +1,10 @@
 {
-  "name": "com.captnjohn.unity-package-template",
-  "displayName": "CaptnJohn - Unity Package Template",
-  "version": "1.0.0-pre.1",
+  "name": "com.ucommon.auto-save",
+  "displayName": "Unity Common - Auto Save",
+  "version": "0.0.1-pre.1",
   "unity": "2020.3",
   "unityRelease": "30f1",
-  "description": "This is a template package, that can be used for building your own packages.",
+  "description": "This is a unity package that makes it possible to have auto saving in Unity.",
   "license": "MIT",
   "author": {
     "name": "Johan",
@@ -12,15 +12,16 @@
     "url": "https://github.com/CaptnJohn"
   },
   "keywords": [
-    "Template",
+    "Autosave",
     "Scripts",
-    "Template"
+    "saving"
   ],
-  "samples": [
-    {
-      "displayName": "Example",
-      "description": "This sample is just an example",
-      "path": "Samples~/Example"
-    }
-  ]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CaptnJohn/ucommon-auto-save.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CaptnJohn/ucommon-auto-save/issues",
+    "email": "jottossonta@gmail.com"
+  }
 }

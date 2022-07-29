@@ -1,21 +1,28 @@
-# Unity Package Template
+# [CaptnJohn](https://github.com/CaptnJohn/ucommon-auto-save) - Unity Common Auto Save package
 
-<!-- Describe your package -->
+[![License Badge](https://img.shields.io/apm/l/ucommon-auto-save)](/LICENSE.md)
+[![Issues](https://img.shields.io/github/issues/CaptnJohn/ucommon-auto-save)](https://github.com/CaptnJohn/ucommon-auto-save/issues)
+[![Version](https://img.shields.io/github/package-json/v/CaptnJohn/ucommon-auto-save)](https://img.shields.io/github/package-json/v/CaptnJohn/ucommon-auto-save)
 
-[![Licence](https://img.shields.io/apm/l/unity-package-template)](/LICENSE)
-[![Issues](https://img.shields.io/github/issues/CaptnJohn/unity-package-template)](https://github.com/CaptnJohn/unity-package-template/issues)
+![image](https://user-images.githubusercontent.com/16833945/181438270-f99e16d0-40e0-4a6a-9ad1-7ade7e30eb75.png)
 
-[API Reference](https://myapi) | [Forum](https://myforum) | [Wiki](https://mywiki)
+UCommon Auto save is a github repository containing a unity package for enabling auto saving in your project.
 
-![image](https://user-images.githubusercontent.com/16833945/181484755-addad110-ab82-48ff-bf8f-37985e43494d.png)
+To use this package simply add from unity package manager or follow the installation process below.
 
-Unity Package Template is a github repository containing a unity package for reusable template when creating unity packages.
-
-To use this package simply use the add green "Use this template" button above.
+After that just read the rest of the Readme below and read documentation to know more.
 
 If there are any questions feel free to message me here!
 
-## Install from Git URL
+## Documentation
+
+Even though the package is fairly simple there is some documentation on how to use it along with a sample of it being used in Unity.
+
+Any changes to package or documentation is listed in the [changelog](/CHANGELOG.md)
+
+## Installation
+
+The easiest way to add this is by utilizing the UPM(Unity package manager in the editor).
 
 Follow this [link](https://docs.unity3d.com/Manual/upm-ui-giturl.html) for a guide of how to do that.
 
