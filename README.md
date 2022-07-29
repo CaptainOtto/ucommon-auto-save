@@ -16,8 +16,6 @@ If there are any questions feel free to message me here!
 
 ## [Documentation](/Documentation~/UCommonAutoSave.md)
 
-Even though the package is fairly simple there is some documentation on how to use it along with a sample of it being used in Unity.
-
 Any changes to package or documentation is listed in the [changelog](/CHANGELOG.md)
 
 ## Installation
