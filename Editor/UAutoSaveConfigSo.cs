@@ -1,5 +1,6 @@
+using UnityEngine;
 
-namespace UCommon.AutoSave.Editor
+namespace UCommon.AutoSave
 {
 	/// <summary>
 	/// Configuration for auto save in Unity.
