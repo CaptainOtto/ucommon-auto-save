@@ -2,7 +2,7 @@
 
 This file will be opened on `View Documentation` button click in the [Package Manager Window](https://docs.unity3d.com/Manual/upm-ui.html)
 
-# Using
+# Usage
 
 For using the auto save package all you need to do is:
 1. Add the package to your project.
