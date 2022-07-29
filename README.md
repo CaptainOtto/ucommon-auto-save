@@ -14,7 +14,7 @@ After that just read the rest of the Readme below and read documentation to know
 
 If there are any questions feel free to message me here!
 
-## Documentation
+## [Documentation](/Documentation~/UCommonAutoSave.md)
 
 Even though the package is fairly simple there is some documentation on how to use it along with a sample of it being used in Unity.
 
